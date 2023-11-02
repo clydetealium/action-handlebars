@@ -12,14 +12,11 @@ jobs:
     name: ci tests
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout code
+    - name: Checkout Code
       uses: actions/checkout@v3
     
-    - name: Clear npm cache
-      run: npm cache clean --force
-
-    - name: Update npm
-      run: npm install -g npm
+    - name: Setup Node
+      uses: actions/setup-node@v3
 
     - name: Install Dependencies
       run: npm install
