@@ -14,6 +14,12 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
+    
+    - name: Clear npm cache
+      run: npm cache clean --force
+
+    - name: Update npm
+      run: npm install -g npm
 
     - name: Install Dependencies
       run: npm install
