@@ -18,8 +18,11 @@ jobs:
     - name: Setup Node
       uses: actions/setup-node@v3
 
-    - name: Install Dependencies
-      run: npm install
+    # - name: Install Dependencies
+    #   run: npm install
+
+    - name: NPM Install
+      run: npm ci
 
     - name: Run Jest Tests
       run: npm test
