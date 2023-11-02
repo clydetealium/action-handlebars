@@ -1,0 +1,11 @@
+{
+  "name": "John Doe",
+  "pets": [
+    "Licky Minaj",
+    "Chairman Meow"
+  ], 
+  "address": {
+    "city": "Anytown",
+    "street": "Elmwood"
+  }
+}
