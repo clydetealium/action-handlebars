@@ -20,5 +20,5 @@ outputs:
   rendered-template:
     description: 'Rendered Mustache template'
 runs:
-  using: 'node14'
+  using: 'node16'
   main: 'main.js'
