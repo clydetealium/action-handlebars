@@ -1,8 +1,8 @@
-name: 'Mustache Template Render Action'
-description: 'Renders Mustache templates with JSON data'
+name: 'Handlebars Template Render Action'
+description: 'Renders Handlebars templates with JSON data'
 inputs:
   template-path:
-    description: 'Path to the Mustache template file'
+    description: 'Path to the Handlebars template file'
     required: true
   data:
     description: 'JSON data to apply to the template'
@@ -18,7 +18,7 @@ inputs:
     default: '{}'
 outputs:
   rendered-template:
-    description: 'Rendered Mustache template'
+    description: 'Rendered Handlebars template'
 runs:
   using: 'node16'
-  main: 'main.js'
+  main: 'dist/index.js'

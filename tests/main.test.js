@@ -22,7 +22,7 @@ describe('My Test Suite', () => {
   test('should prefer data path when provided', async () => {
     const compare = fs.readFileSync('./tests/fixtures/data-test.rendered', 'utf-8');
 
-    core.getInput.mockReturnValueOnce('./tests/fixtures/data-test.mustache')
+    core.getInput.mockReturnValueOnce('./tests/fixtures/data-test.handlebars')
       .mockReturnValueOnce({})
       .mockReturnValueOnce('./tests/fixtures/context.json');
 
@@ -55,7 +55,7 @@ describe('My Test Suite', () => {
     }
     const compare = fs.readFileSync('./tests/fixtures/data-test.rendered', 'utf-8');
 
-    core.getInput.mockReturnValueOnce('./tests/fixtures/data-test.mustache')
+    core.getInput.mockReturnValueOnce('./tests/fixtures/data-test.handlebars')
       .mockReturnValueOnce(JSON.stringify(data));
 
     setOutputSpy.mockImplementation(() => {
