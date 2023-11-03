@@ -20,7 +20,7 @@ jobs:
       uses: actions/checkout@v3
 
     - name: Render Handlebars Template
-      uses: clydetealium/action-handlebars@v1
+      uses: clydetealium/action-handlebars@v2
       with:
         template-path: 'path/to/template.handlebars'
         data: '{"name": "John Doe", "age": 30}'
@@ -50,7 +50,7 @@ Here's an example of how to use this action in a GitHub Actions workflow:
 
 ```yaml
 - name: Render Handlebars Template
-  uses: clydetealium/action-handlebars@v1
+  uses: clydetealium/action-handlebars@v2
   with:
     template-path: 'path/to/template.handlebars'
     data: '{"name": "John Doe", "age": 30}'
