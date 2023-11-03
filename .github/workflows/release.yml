@@ -1,4 +1,4 @@
-name: gha-action
+name: action-handlebars-release
 on:
   push:
     branches:
