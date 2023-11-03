@@ -33,7 +33,7 @@ jobs:
 ## Inputs
 
 ### template-path (required)
-> The path to the Mustache template file. This file should be located in your repository.
+> The path to the Handlebars template file. This file should be located in your repository.
 
 ### data (optional, default: {})
 > JSON data to apply to the template. This data will be used to fill in the placeholders in the template.
@@ -75,6 +75,20 @@ run tests:
 ```
 npm test
 ```
+
+### build
+This action is implemented in javascript. It is built using ncc. To build the action, run the following command from the root of the repo:
+
+```
+ncc build main.js --license licenses.txt
+```
+
+You'll need to install ncc globally to run this command:
+```
+npm install -g @vercel/ncc
+```
+Read more about this from the [GitHub Actions docs](https://docs.github.com/en/actions/creating-actions/creating-a-javascript-action#commit-tag-and-push-your-action-to-github)
+
 
 ## Conventional commit
 Please see the [release workflow](./.github/workflows/release.yml) for context.
