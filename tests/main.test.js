@@ -26,8 +26,6 @@ describe('My Test Suite', () => {
       .mockReturnValueOnce({})
       .mockReturnValueOnce('./tests/fixtures/context.json');
 
-    console.log('eat shit')
-
     setOutputSpy.mockImplementation(() => {
       console.log('setOutput called');
     });

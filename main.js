@@ -1,6 +1,6 @@
 const core = require('@actions/core');
 const fs = require('fs');
-const mustache = require('mustache');
+const Handlebars = require('handlebars');
 
 async function main() {
   try {
@@ -11,7 +11,8 @@ async function main() {
     const context = (dataPath) ?
       fs.readFileSync(dataPath, 'utf8') :
       data;
-    const rendered = mustache.render(template, JSON.parse(context));
+    const compiledTemplate = Handlebars.compile(template);
+    const rendered = compiledTemplate(JSON.parse(context));
 
     core.setOutput('rendered-template', rendered);
   } catch (error) {
