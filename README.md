@@ -1,10 +1,10 @@
-# action-mustache
-This GitHub Action allows you to render Mustache templates using JSON data. Mustache is a logic-less template syntax that can be used to generate dynamic content from templates.
+# action-handlebars
+This GitHub Action allows you to render Handlebars templates using JSON data. Handlebars is a flexible template engine that can be used to generate dynamic content from templates.
 
 ## Usage
 
 ```yaml
-name: Render Mustache Template
+name: Render Handlebars Template
 
 on:
   push:
@@ -19,10 +19,10 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v3
 
-    - name: Render Mustache Template
-      uses: clydetealium/action-mustache@v1
+    - name: Render Handlebars Template
+      uses: clydetealium/action-handlebars@v2
       with:
-        template-path: 'path/to/template.mustache'
+        template-path: 'path/to/template.handlebars'
         data: '{"name": "John Doe", "age": 30}'
       id: render
 
@@ -43,24 +43,24 @@ jobs:
 
 ## Outputs
 ### rendered-template
-> The rendered Mustache template. You can use this output in subsequent steps of your workflow.
+> The rendered Handlebars template. You can use this output in subsequent steps of your workflow.
 
 ## Example
 Here's an example of how to use this action in a GitHub Actions workflow:
 
 ```yaml
-- name: Render Mustache Template
-  uses: your-account/mustache-render-action@v1
+- name: Render Handlebars Template
+  uses: clydetealium/action-handlebars@v2
   with:
-    template-path: 'path/to/template.mustache'
+    template-path: 'path/to/template.handlebars'
     data: '{"name": "John Doe", "age": 30}'
   id: render
 ```
-This action will render the Mustache template located at 'path/to/template.mustache' with the provided data and store the result in the rendered-template output.
+This action will render the Handlebars template located at 'path/to/template.handlebars' with the provided data and store the result in the rendered-template output.
 
-## Mustache
-Skim the [Mustache docs](https://mustache.github.io/mustache.5.html)
-Online mustache [template tester](https://mustache.github.io/#demo)
+## Handlebars
+Skim the [Handlebars docs](https://handlebarsjs.com/)
+Online Handlebars [template tester](https://handlebarsjs.com/playground/)
 
 ## Contributing
 Clone this repo

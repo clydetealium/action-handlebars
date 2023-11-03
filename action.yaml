@@ -12,6 +12,10 @@ inputs:
     description: 'Path to json data file'
     required: false
     default: ''
+  functions:
+    description: 'Functions to apply to the template'
+    required: false
+    default: '{}'
 outputs:
   rendered-template:
     description: 'Rendered Mustache template'
